@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Color Guessing Game</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1 data-testid="gameInstructions">Guess the correct color!</h1>
-    <div class="color-box" id="colorBox" data-testid="colorBox"></div>
-    <div class="color-options" id="colorOptions"></div>
-    <p class="status" id="gameStatus" data-testid="gameStatus"></p>
-    <p id="score_para">Score: <span id="score" data-testid="score">0</span></p>
-    <button
-      onclick="startNewGame()"
-      data-testid="newGameButton"
-      id="newGameButton"
-    >
-      New Game
-    </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <div class="modal-overlay" id="modalOverlay"></div>
-    <div class="modal" id="resultModal">
-      <p id="modalMessage"></p>
-      <button onclick="closeModal()">OK</button>
+</head>
+<body>
+    <div class="game-container">
+        <div id="score-container">
+            <i class="fas fa-trophy"></i> Score: <span id="score" data-testid="score">0</span>
+        </div>
+        <h1 data-testid="gameInstructions" id="gameInstructions">Guess the correct color!</h1>
+        <div id="colorBox" data-testid="colorBox"></div>
+
+        <div data-testid="gameStatus"></div>  <div class="color-options">
+            <button data-testid="colorOption"></button>
+            <button data-testid="colorOption"></button>
+            <button data-testid="colorOption"></button>
+            <button data-testid="colorOption"></button>
+            <button data-testid="colorOption"></button>
+            <button data-testid="colorOption"></button>
+        </div>
+        <button id="newGameButton" data-testid="newGameButton">New Game</button>
     </div>
-
-    <script src="./script.js"></script>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
-
-
- 
